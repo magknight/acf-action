@@ -8,5 +8,8 @@
   },
   "keywords": [],
   "author": "Alex Beavil/Magknight",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "@actions/core": "^1.2.4"
+  }
 }
