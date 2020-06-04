@@ -4,13 +4,7 @@ on:
     branches: [master]
   pull_request:
     branches: [master]
-
-env:
-  GITHUB_TOKEN: ${{ github.token }}
 jobs:
-  # ------------------------------------------------------------------------------
-  # This job builds the 787, and uploads an artifact
-  # ------------------------------------------------------------------------------
   build:
     runs-on: ubuntu-latest
     steps:
@@ -19,3 +13,7 @@ jobs:
         with:
           dest: "./res/"
           version: "v1.9.0"
+      - uses: actions/upload-artifact@v2
+        with:
+          name: Results
+          path: "./res/"

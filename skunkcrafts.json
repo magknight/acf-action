@@ -1,5 +1,5 @@
 {
-    "zone": "magknight",
-    "name": "Magknight 787 Aviator's Edition",
-    "module": "aviatorsEdition150"
+    "zone": "testAE",
+    "name": "Test ACF",
+    "module": "moduleEA"
 }
