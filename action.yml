@@ -1,0 +1,28 @@
+name: "ACF/Cfg rewriter"
+description: "stuff to do with my changelog format"
+inputs:
+  dest: # id of input
+    description: "Destination folder for ACF content"
+    required: true
+  src: # id of input
+    description: "Source folder for ACF content"
+    required: false
+    default: "./"
+  version: # id of input
+    description: "Version to write"
+    required: true
+  acf-name: # id of input
+    description: "ACF name"
+    required: false
+    default: "B789"
+  write-acf: # id of input
+    description: "Whether to ship the version to the ACF"
+    required: false
+    default: "true"
+  write-cfg: # id of input
+    description: "Whether to ship the version to the Cfg"
+    required: false
+    default: "true"
+runs:
+  using: "node12"
+  main: "index.js"

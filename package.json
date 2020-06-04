@@ -1,0 +1,12 @@
+{
+  "name": "acf-action",
+  "version": "1.0.0",
+  "description": "Action to deal with our release ACF modification, along with skunkcrafts_updater.cfg",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "Alex Beavil/Magknight",
+  "license": "MIT"
+}
