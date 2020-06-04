@@ -14,7 +14,7 @@ inputs:
   acf-name: # id of input
     description: "ACF name"
     required: false
-    default: "B789"
+    default: "B7879"
   write-acf: # id of input
     description: "Whether to ship the version to the ACF"
     required: false
