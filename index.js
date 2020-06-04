@@ -9,7 +9,7 @@ var dest = core.getInput('dest')
 function updateAcf() {
     if (core.getInput('write-acf') === 'true') {
         try {
-            fs.readFile(`${src}/${acfName}.acf`, 'utf8', function (err, data) {
+            fs.readFile(path.join(src, `${acfName}.acf`), 'utf8', function (err, data) {
                 if (err) {
                     return core.setFailed(err);
                 }
@@ -18,7 +18,7 @@ function updateAcf() {
                 } else {
                     data = data.replace(/PROPERTIES_BEGIN/, "PROPERTIES_BEGIN\n" + "P acf/_version " + version)
                 }
-                var destination = `${dest}/${acfName}.acf`
+                var destination = path.join(dest, `${acfName}.acf`)
                 fs.mkdir(path.dirname(destination), { recursive: true }, (err) => {
                     if (err) throw err;
                 });
@@ -35,17 +35,17 @@ function updateAcf() {
 }
 function updateCfg() {
     if (core.getInput('write-cfg') === 'true') {
-        fs.readFile(`${src}/skunkcrafts.json`, 'utf8', function (err, data) {
+        fs.readFile(path.join(src, `skunkcrafts.json`), 'utf8', function (err, data) {
             var json = JSON.parse(data)
             var cfg = `zone|${json.zone}
 module|${json.module}
 name|${json.name}
 version|${version}
 locked|true`
-            var destination = `${dest}/skunkcrafts_updater.cfg`
+            var destination = path.join(dest, `/skunkcrafts_updater.cfg`)
             fs.mkdir(path.dirname(destination), { recursive: true }, (err) => {
                 if (err) throw err;
-            });
+            })
             fs.writeFile(destination, data, 'utf8', function (err) {
                 if (err) return core.setFailed(err);
             });
