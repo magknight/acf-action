@@ -1,6 +1,12 @@
 # acf-action ![Test module](https://github.com/magknight/acf-action/workflows/Test%20module/badge.svg)
  Action to deal with our release ACF modification, along with skunkcrafts_updater.cfg
 
+```
+      - uses: magknight/acf-action@v2
+        with:
+          dest: "./res/"
+          version: "v1.9.0"
+```
 ## Inputs
 ### version
 - Required

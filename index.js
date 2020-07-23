@@ -46,7 +46,7 @@ locked|true`
             fs.mkdir(path.dirname(destination), { recursive: true }, (err) => {
                 if (err) throw err;
             })
-            fs.writeFile(destination, data, 'utf8', function (err) {
+            fs.writeFile(destination, cfg, 'utf8', function (err) {
                 if (err) return core.setFailed(err);
             });
         })
