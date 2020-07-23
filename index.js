@@ -42,7 +42,7 @@ module|${json.module}
 name|${json.name}
 version|${version}
 locked|true`
-            var destination = path.join(dest, `/skunkcrafts_updater.cfg`)
+            var destination = path.join(dest, `/skunkcrafts_updater_config.txt`)
             fs.mkdir(path.dirname(destination), { recursive: true }, (err) => {
                 if (err) throw err;
             })
