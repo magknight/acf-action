@@ -11,6 +11,9 @@ inputs:
   version: # id of input
     description: "Version to write"
     required: true
+  branch: # id of input
+    description: "Branch to send to skunkcrafts file"
+    required: false
   acf-name: # id of input
     description: "ACF name"
     required: false
