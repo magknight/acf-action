@@ -48,10 +48,10 @@ function updateCfg() {
 			function (err, data) {
 				var json = JSON.parse(data);
 				var branch = core.getInput("branch");
-				if (json[branch] != nil) {
+				if (json[branch] != null) {
 					json = json[branch];
 					console.log(`Using branch ${branch}`);
-				} else if (json["default"] != nil) {
+				} else if (json["default"] != null) {
 					json = json["default"];
 					console.log(`Branch not found, using default`);
 				} else {
