@@ -1,5 +1,7 @@
 {
-    "zone": "testAE",
-    "name": "Test ACF",
-    "module": "moduleEA"
+    "default": {
+        "zone": "testAE",
+        "name": "Test ACF",
+        "module": "moduleEA"
+    }
 }
