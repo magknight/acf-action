@@ -3,5 +3,10 @@
         "zone": "testAE",
         "name": "Test ACF",
         "module": "moduleEA"
+    },
+    "marty": {
+        "zone": "testAE",
+        "name": "Test ACF",
+        "module": "moduleEA"
     }
 }
