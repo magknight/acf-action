@@ -24,6 +24,14 @@ function updateAcf() {
 							"PROPERTIES_BEGIN\n" + "P acf/_version " + version
 						);
 					}
+					if (data.match(/P acf\/_notes/)) {
+						data = data.replace(/(?<=P acf\/_notes ).+(?<!\n)/, version);
+					} else {
+						data = data.replace(
+							/PROPERTIES_BEGIN/,
+							"PROPERTIES_BEGIN\n" + "P acf/_notes " + version
+						);
+					}
 					var destination = path.join(dest, `${acfName}.acf`);
 					fs.mkdir(path.dirname(destination), { recursive: true }, (err) => {
 						if (err) throw err;
