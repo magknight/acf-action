@@ -8,7 +8,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - uses: ./
         with:
           dest: "./res/"
@@ -18,7 +18,7 @@ jobs:
           dest: "./res/"
           version: "v1.34.0"
           branch: "marty"
-      - uses: actions/upload-artifact@v2
+      - uses: actions/upload-artifact@v3
         with:
           name: Results
           path: "./res/"
